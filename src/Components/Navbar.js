@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from "react";
-import './Navbar.css';
+import "./Navbar.css";
 
-function Navbar (){
-    const [show,setShow] = useState(false);
+function Navbar() {
+    const [show, setShow] = useState(false);
 
     useEffect(() => {
         const handleScroll = () => {
@@ -13,26 +13,23 @@ function Navbar (){
             }
         };
         window.addEventListener('scroll', handleScroll);
-        return() =>{
+        return() => {
             window.removeEventListener('scroll', handleScroll);
         };
     }, []);
 
     return(
         <div className= {`navbar ${show && "navbar--solid"}`}>
-            <div className="navbar_contents">
-                <img 
-                className="navbar__logo"
+            <img 
+                className="navbar_logo"
                 src="https://upload.wikimedia.org/wikipedia/commons/0/08/Netflix_2015_logo.svg"
                 alt="Netflix Logo"
-                />
-
-                <img 
-                className="navbar__avatar"
+            />
+            <img 
+                className="navbar_avatar"
                 src="https://upload.wikimedia.org/wikipedia/commons/0/0b/Netflix-avatar.png"
                 alt="User Avatar"
-                />
-            </div>
+            />
         </div>
     );
 };
