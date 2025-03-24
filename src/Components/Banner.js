@@ -24,13 +24,13 @@ function Banner() {
 
     return (
         <header
-            className="banner"
-            style={{
-                backgroundSize: "cover",
-                backgroundImage: `url("https://image.tmdb.org/t/p/original/${movie?.backdrop_path}")`,
-                backgroundPosition: "center center",
-            }}
-        >
+    className={`banner ${window.innerWidth < 768 ? 'mobile' : ''}`}
+    style={{
+        backgroundSize: "cover",
+        backgroundImage: `url("https://image.tmdb.org/t/p/original/${movie?.backdrop_path}")`,
+    }}
+>
+    
             <div className="banner__contents">
                 <h1 className="banner__title">{movie?.title || movie?.name || movie?.original_name}</h1>
                 <div className="banner__buttons">
