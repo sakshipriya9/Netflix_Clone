@@ -69,7 +69,7 @@
     );
 }
 
-/* Mobile tweaks */
+/* Responsive Design */
 @media(max-width: 768px) {
     .banner__title {
         font-size: 2.5rem;
